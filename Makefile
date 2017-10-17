@@ -1,7 +1,8 @@
+CHAPTERS=${shell ls chapter*.tex}
+
 default: book.pdf
 
-
-book.dvi: book.tex
+book.dvi: book.tex ${CHAPTERS}
 	latex book.tex
 
 book.pdf: book.dvi
