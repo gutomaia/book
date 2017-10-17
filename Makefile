@@ -8,8 +8,4 @@ book.pdf: book.dvi
 	dvipdf book.dvi
 
 clean:
-	@rm *.aux
-	@rm *.dvi
-	@rm *.log
-	@rm *.toc
-	@rm *.pdf
+	@rm *.aux *.dvi *.log *.toc *.pdf
