@@ -1,0 +1,8 @@
+language: python
+install:
+  - sudo apt-get install texlive-latex-base
+  - sudo apt-get install wine
+python:
+  - "2.7"
+script:
+  - make
