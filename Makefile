@@ -2,11 +2,11 @@ CHAPTERS=${shell ls chapter*.tex}
 
 default: book.pdf
 
-book.dvi: book.tex ${CHAPTERS}
-	latex book.tex
+book.pdf: ${CHAPTERS}
+	pdflatex -shell-escape book.tex
 
-book.pdf: book.dvi
-	dvipdf book.dvi
+run: book.pdf
+	evince book.pdf
 
 clean:
 	@rm *.aux *.dvi *.log *.toc *.pdf
